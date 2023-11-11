@@ -22,7 +22,7 @@ model Org {
   whatsapp           String
   created_at         DateTime @default(now())
 
-  Pet Pet[]
+  Pets Pet[]
 
   @@map("orgs")
 }
@@ -36,6 +36,7 @@ model Pet {
   size         Size
   energy       Energy
   independence Independence
+  environment  Environment
   photos       String[]
   state        String
   city         String
@@ -78,4 +79,10 @@ enum Independence {
   LOW
   MEDIUM
   HIGH
+}
+
+enum Environment {
+  SMALL
+  MEDIUM
+  BIG
 }
